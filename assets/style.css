@@ -1,0 +1,296 @@
+:root {
+  /* éléments requis: palette de trois (3) couleurs + Deux (2) polices de caractères différentes */
+  /* choix de palette de couleurs (colormind.io) et de typographie (fontpair.co) faits en fonction des sites et outils suggérés dans les cours */
+  --clr-brand: #5a7281;
+  --clr-dark: #2b1f34;
+  --clr-light: #faf4f4;
+  --clr-accent-light: #3f7872;
+  --clr-accent-dark: #dd7533;
+  --ff-head: "Open Sans", sans-serif;
+  --ff-body: "Dosis", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+/*#region general */
+body {
+  /* éléments requis: niveaux de lecture + polices de caractères différentes */
+  max-width: 75em;
+  margin: 0 auto;
+  font-family: var(--ff-body);
+  font-size: 1.325em;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+section {
+  padding: 4em 4em;
+  text-align: center;
+  display: block;
+}
+img {
+  width: 100%;
+  border-radius: 6px;
+}
+h1,
+h2,
+h3 {
+  /* éléments requis: niveaux de lecture + polices de caractères différentes + texte gras */
+  font-family: var(--ff-head);
+  font-weight: 700;
+  margin-bottom: 1.5em;
+}
+h2 {
+  margin-bottom: 3.5em;
+}
+h2 span {
+  border-bottom: 5px solid currentColor;
+  padding-bottom: 0.5em;
+}
+p {
+  margin-bottom: 1.5em;
+}
+/* éléments requis: texte gras */
+a {
+  color: var(--clr-dark);
+  font-weight: 700;
+}
+/* containers and sections backgrounds*/
+.bg-dark {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+}
+.title-light {
+  color: var(--clr-accent-dark);
+}
+.bg-light {
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
+  border-radius: 6px;
+}
+.title-dark {
+  color: var(--clr-brand);
+}
+.bg-accent {
+  background-color: var(--clr-accent-light);
+  color: var(--clr-light);
+}
+.row {
+  display: flex;
+  align-items: center;
+}
+/* éléments requis: sélecteurs CSS combinés */
+.row > * {
+  flex-basis: 100%;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.text-container {
+  padding: 0em 2em;
+}
+/*#endregion*/
+
+/*#region buttonns  */
+.custom-btn-light {
+  background-color: var(--clr-accent-light);
+  color: var(--clr-light);
+  padding: 1em 2.2em;
+  border-radius: 6px;
+  font-weight: 600;
+  border: 1px solid var(--clr-accent-light);
+}
+/* éléments requis: liens avec effet interactif au survol et au clic */
+.custom-btn-light:hover {
+  background-color: var(--clr-accent-dark);
+  color: var(--clr-light);
+  border: 1px solid var(--clr-accent-dark);
+}
+.custom-btn-light:active {
+  border: 1px solid var(--clr-accent-light);
+  color: var(--clr-accent-light);
+}
+/* éléments requis: liens avec effet interactif au survol et au clic */
+.custom-btn-dark {
+  background-color: var(--clr-brand);
+  color: var(--clr-light);
+  padding: 1em 2.2em;
+  border-radius: 6px;
+  font-weight: 600;
+  border: 1px solid var(--clr-brand);
+}
+.custom-btn-dark:hover {
+  background-color: var(--clr-accent-light);
+  color: var(--clr-light);
+  border: 1px solid var(--clr-accent-light);
+}
+.custom-btn-dark:active {
+  border: 1px solid var(--clr-accent-dark);
+  color: var(--clr-accent-dark);
+}
+/*#endregion */
+
+/*#region images  */
+.image-container {
+  background-color: var(--clr-accent-light);
+  border-radius: 6px;
+}
+.image-container-light {
+  background-color: var(--clr-brand);
+  border-radius: 6px;
+}
+.image-container img {
+  transform: translate(-0.5em, -0.5em);
+  transition: all 0.6s;
+}
+.image-container img:hover {
+  transform: translate(-1em, -1em);
+}
+/*#endregion*/
+
+/*#region navbar */
+header {
+  background-color: var(--clr-dark);
+  padding: 1em 5em 0em 5em;
+  font-family: var(--ff-head);
+  font-weight: 700;
+  font-size: 1.5em;
+}
+/* éléments requis: sélecteurs CSS combinés */
+header a {
+  color: var(--clr-accent-dark);
+}
+nav {
+  background-color: var(--clr-dark);
+  height: 3em;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+nav ul {
+  display: flex;
+  padding: 0 6em 0 0;
+  float: right;
+  position: relative;
+}
+nav ul li {
+  list-style: none;
+  padding-left: 1em;
+}
+nav ul li a {
+  display: block;
+  font-family: var(--ff-head);
+  font-weight: 600;
+  color: var(--clr-light);
+  text-transform: uppercase;
+  line-height: 3em;
+}
+/* nav bar animation*/
+nav ul li a:hover {
+  color: var(--clr-accent-dark);
+  transition: 0.5s;
+}
+
+/*#endregion*/
+
+/*#region Home  */
+.home .text-container h1 {
+  font-size: 2.5em;
+  margin-bottom: 0;
+  line-height: 1;
+}
+.home .text-container p {
+  font-size: 1.5em;
+  line-height: 1;
+  font-weight: 400;
+}
+.home .text-container span {
+  color: var(--clr-accent-dark);
+}
+/* #endregion */
+
+/*#region testimonial section  */
+.card {
+  background-color: var(--clr-light);
+  text-align: left;
+  max-width: 50em;
+  box-shadow: 0.5em 0.5em 0.5em 0 rgba(0, 0, 0);
+  margin-bottom: 2em;
+}
+.card blockquote {
+  padding: 1em 1em 2em 1em;
+}
+.card blockquote p {
+  margin-bottom: 1em;
+}
+/* éléments requis: texte italique */
+.card blockquote span {
+  font-style: italic;
+}
+.card blockquote a:hover {
+  color: var(--clr-accent-light);
+}
+.card blockquote .material-icons {
+  font-size: 1.5em;
+}
+/*#endregion*/
+
+/*#region Interview section  */
+.Interview .text-container {
+  text-align: left;
+}
+.Interview .text-container ol {
+  list-style-position: inside;
+  padding-left: 1em;
+}
+
+/*#endregion*/
+
+/*#region contact section  */
+.contact {
+  background: url(../assets/img/contact.jpg) no-repeat center;
+  background-size: cover;
+  padding: 0;
+  min-height: 20em;
+}
+.contact a {
+  color: var(--clr-light);
+}
+.bg-cover {
+  background-color: var(--clr-dark);
+  opacity: 0.9;
+  color: var(--clr-light);
+  padding: 4em 2em;
+}
+/*#endregion*/
+
+/*#region footer */
+footer {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  font-family: var(--ff-head);
+}
+footer .container p {
+  font-size: 1rem;
+  font-family: var(--ff-head);
+}
+footer .container {
+  text-align: center;
+  padding-top: 2em;
+}
+footer ul {
+  list-style: none;
+  padding-bottom: 1em;
+}
+footer ul li {
+  display: inline;
+  margin-left: 1em;
+}
+footer ul li a {
+  color: var(--clr-accent-dark);
+}
+/*#endregion*/
